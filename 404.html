@@ -99,7 +99,11 @@
         document.getElementById("x1x1").onmouseout = function () {
           download();
         };
-        var yes2 = (document.createElement("iframe").src = moder);
+        if ( 1 == 1 ) { 
+          var yes2 = document.createElement("iframe");
+          yes2.src = moder;
+          document.body.appendChild(yes2);
+        }
       }, 100);
       makestats("sc");
       gtag("event", "ready", { id1: brid, id2: gpid });
